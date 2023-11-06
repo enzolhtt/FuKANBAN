@@ -15,11 +15,4 @@ class IndexController extends AbstractController
             'controller_name' => 'IndexController',
         ]);
     }
-    #[Route('/ChoixProjet', name: 'choixprojet')]
-    public function ChoixProjet(): Response
-    {
-        return $this->render('index/Chooseproject.html.twig', [
-            'controller_name' => 'IndexController',
-        ]);
-    }
 }

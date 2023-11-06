@@ -22,6 +22,14 @@ class UtilisateursController extends AbstractController
         ]);
     }
 
+    #[Route('/projets/{slug}', name: 'UserProjets', methods: ['GET'])]
+    public function ProjetList(UtilisateursRepository $utilisateursRepository, Projets $projets): Response
+    {
+        return $this->render('projets/Chooseproject.html.twig', [
+            'articles' => $ArticleRepository->findBy(['categorie' => $categorie], []),
+        ]);
+    }
+
     #[Route('/new', name: 'app_utilisateurs_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response
     {

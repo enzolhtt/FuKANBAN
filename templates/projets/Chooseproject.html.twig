@@ -3,5 +3,7 @@
 {% block title %}Choix du projet{% endblock %}
 
 {% block body %}
-
+{% for projet in projets %}
+<li>{{projet}}</li>
+{% endfor %}
 {% endblock %}
