@@ -1,0 +1,66 @@
+{% extends 'index2.html.twig' %}
+
+{% block title %}Kanban{% endblock %}
+
+{% block body %}
+<!-- Simple MDL Progress Bar -->
+<div id="p1" class="mdl-progress mdl-js-progress"></div>
+<script>
+  document.querySelector('#p1').addEventListener('mdl-componentupgraded', function() {
+    this.MaterialProgress.setProgress(44);
+  });
+</script><div class="kanban__title">
+      <h1><i class="fa-solid fa-briefcase"></i> Project name </h1></div>
+<div class="dd">
+
+  <ol class="kanban To-do">
+    <div class="kanban__title">
+      <h2><i class="fa-solid fa-triangle-exclamation"></i></i> A faire</h2></div>
+   <li class="dd-item" data-id="1">
+      <h3 class="title dd-handle" >Do the dishes</h3>
+        <div class="text" contenteditable="true">wwPaul Rand once said, “The public is more familiar with bad fucking design than good design. It is, in effect, conditioned to prefer 
+    
+     </div> <i class="material-icons" id="label blue">label</i><div class="actions">
+        
+    </li>
+    <li class="dd-item" data-id="4">
+      <h3 class="title dd-handle">log-in bug</h3>
+        <div class="text" contenteditable="true">Paul Rand once said, “The public is more familiar with bad fucking design than good design. It is, in effect, conditioned to prefer bad design,</div><div class="actions">
+        
+    </li>
+    <li class="dd-item" data-id="3">
+      <h3 class="title dd-handle">UX design</h3>
+        <div class="text" contenteditable="true">Paul Rand once said, “The public is more familiar with bad fucking design than good design. It is, in effect, conditioned to prefer bad design,</div><div class="actions">
+        
+  </ol>
+  <ol class="kanban progress">
+    <h2><i class="fa-solid fa-bars-progress"></i> En cours</h2>
+      <li class="dd-item" data-id="5">
+      <h3 class="title dd-handle">title of job</h3>
+        <div class="text" contenteditable="true">Paul Rand once said, “The public is more familiar with bad fucking design than good design. It is, in effect, conditioned to prefer bad design,</div><div class="actions">
+        
+    </li>
+  </ol>
+  <ol class="kanban  Done">
+    <h2><i class="fa-solid fa-thumbs-up"></i>   <i class="fa-solid fa-thumbs-down"></i> A tester</h2>
+      <li class="dd-item" data-id="5">
+      <h3 class="title dd-handle"> title of job</h3>
+        <div class="text" contenteditable="true">Paul Rand once said, “The public is more familiar with bad fucking design than good design. It is, in effect, conditioned to prefer bad design,</div><div class="actions">
+        
+    </li></li><li class="dd-item" data-id="2">
+      <h3 class="title dd-handle">title of job</h3>
+        <div class="text" contenteditable="true">Paul Rand once said, “The public is more familiar with bad fucking design than good design. It is, in effect, conditioned to prefer bad design,</div><div class="actions">
+        
+    </li>
+  </ol>
+  <ol class="kanban Gone">
+    <h2><i class="fa-solid fa-circle-check"></i> Fini</h2>
+     <li class="dd-item" data-id="5">
+      <h3 class="title dd-handle">title of job</h3>
+        <div class="text" contenteditable="true">Paul Rand once said, “The public is more familiar with bad fucking design than good design. It is, in effect, conditioned to prefer bad design,</div><div class="actions">
+        
+    </li>
+  </ol>
+
+</div>
+{% endblock %}
